@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+# JibeInstagram Controllers
+GET     /jibeInstagram              controllers.JibeInstagramController.index()
+GET     /jibeInstagram/auth         controllers.JibeInstagramController.auth()
+
+# JibeFlickr Controllers 
+GET     /jibeFlickr                 controllers.JibeFlickrController.index()
+GET     /jibeFlickr/auth            controllers.JibeFlickrController.auth()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

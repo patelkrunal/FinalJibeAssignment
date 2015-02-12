@@ -1,0 +1,19 @@
+@(images:List[Image])
+@main("Instagram Image Viewer"){
+<script src="@routes.Assets.at("javascripts/jquery-1.11.0.min.js")"></script>
+<script src="@routes.Assets.at("javascripts/lightbox.min.js")"></script>
+<link href="@routes.Assets.at("stylesheets/lightbox.css")" rel="stylesheet" />
+<link href="@routes.Assets.at("stylesheets/grid.css")" rel="stylesheet" />
+}
+
+@import models.Image
+<div class="container_12" style="text-align:center"><div class="grid_12"><h1>Jibe Instagram Image Gallery</h1></div></div>
+<div class="container_12" style="text-align:center"> 
+	<div class="grid_12">
+		@for(i<-images){
+		<div class="grid_2">
+		<a href="@i.url" data-lightbox="group" data-title="Tag: @i.tag - Comments :@i.comment"><img src="@i.thumbnailUrl"></a>
+		</div>
+		}
+	 </div>
+</div>

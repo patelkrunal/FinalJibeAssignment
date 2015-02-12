@@ -1,0 +1,21 @@
+Play Application in response to Jibe Code Challenge
+===================================================
+
+Use the Instagram and Flickr APIs to return all photos with a #dctech hashtag within the last month and rank them by the amount of comments each received
+
+Instagram API:
+ - route "/jibeInstagram" will redirect user for authentication and finally we will land on "/auth" route.
+ - This page will fetch data and created List of Image object and send it to view.
+ - JibeInstagramView will simply shows gallery of images. 
+ - I have sorted image objects according to comments. 
+ 
+ Flicker API: 
+ - Flow is pretty much similar to Instagram. 
+ - I have used scribe library to implement oAuth flow. 
+ - getting xml data. 
+ - For simplicity using number of views instead of comments to sort data.
+ - For comments, I need to call api for each image so I dropped idea because of time constraint.
+ 
+ 
+ References:
+ Scribe Library, Lightbox library(Gallery), API documentation.
